@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  background: #111;
+  color: lime;
+  overflow: hidden;
+}
+
+#greeting, #message {
+  margin-top: 50px;
+  animation: blink 1.5s infinite alternate;
+}
+
+#missionText {
+  color: cyan;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+#gameArea {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  border: 3px dashed cyan;
+  margin-top: 20px;
+  overflow: hidden;
+  background: #222;
+}
+
+.balloon {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  animation: float 10s linear infinite;
+  user-select: none;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100vh); }
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 20px;
+  background: lime;
+  border: none;
+  border-radius: 12px;
+  color: black;
+  cursor: pointer;
+  box-shadow: 0 0 20px lime;
+}
+
+button:hover {
+  background: cyan;
+  box-shadow: 0 0 25px cyan;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  100% { opacity: 0.7; }
+}
+#embarrassingPic {
+    position: fixed; /* Fixed to the screen */
+    top: 60%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset by 50% of its width and height to truly center it */
+    display: none; /* Initially hidden */
+    max-width: 80%; /* You can adjust the size */
+    max-height: 50%; /* You can adjust the size */
+    border-radius: 15px; /* Optional: rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Optional: shadow for some effect */
+  }
+  
+  
+  @keyframes popIn {
+    0% { transform: scale(0) rotate(0deg); opacity: 0; }
+    60% { transform: scale(1.2) rotate(10deg); opacity: 1; }
+    100% { transform: scale(1) rotate(0deg); }
+  }
+  
