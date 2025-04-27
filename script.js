@@ -48,7 +48,7 @@ function startGame() {
       balloon.remove();
       clearInterval(moveUp);
 
-      if (score >= 2) {
+      if (score >= 23) {
         clearInterval(balloonInterval);
         setTimeout(() => {
             game.style.display = 'none';
